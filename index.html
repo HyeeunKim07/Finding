@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상산고 찾아드림</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>상산고 찾아드림</h1>
+      <h3>물건 명칭과 (추정) 분실 장소, 분실 일자를 작성해주세요</h3>
+      <div class="tabs">
+        <button
+          class="tablink"
+          onclick="openTab(event, 'register')"
+          id="defaultOpen"
+        >
+          등록
+        </button>
+        <button class="tablink" onclick="openTab(event, 'list')">목록</button>
+      </div>
+      <div id="register" class="tabcontent">
+        <form id="lostFoundForm">
+          <input type="text" id="itemName" placeholder="물건 이름" required />
+          <input
+            type="text"
+            id="itemDescription"
+            placeholder="물건 설명"
+            required
+          />
+          <input type="date" id="lostDate" required />
+          <button type="submit">등록</button>
+        </form>
+      </div>
+      <div id="list" class="tabcontent">
+        <ul id="itemList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
